@@ -23,7 +23,7 @@ plugins {
     signing
     id("com.bmuschko.docker-remote-api") version "6.7.0"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
-    id("com.diffplug.spotless") version "6.0.2"
+    id("com.diffplug.spotless") version "6.0.4"
     id("com.gorylenko.gradle-git-properties") version "2.3.2"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("ru.vyarus.quality") version "4.7.0"
@@ -68,11 +68,11 @@ subprojects {
         imports {
             mavenBom("com.fasterxml.jackson:jackson-bom:2.12.5")
             mavenBom("org.junit:junit-bom:5.8.2")
-            mavenBom("io.qameta.allure:allure-bom:2.17.0")
+            mavenBom("io.qameta.allure:allure-bom:2.17.1")
         }
         dependencies {
             dependency("com.beust:jcommander:1.81")
-            dependency("com.github.spotbugs:spotbugs-annotations:4.5.0")
+            dependency("com.github.spotbugs:spotbugs-annotations:4.5.1")
             dependency("com.opencsv:opencsv:4.6")
             dependency("commons-beanutils:commons-beanutils:1.9.4")
             dependency("commons-io:commons-io:2.11.0")
@@ -156,7 +156,7 @@ subprojects {
             if (spotbugs != null) {
                 dependencies {
                     spotbugs("org.slf4j:slf4j-simple")
-                    spotbugs("com.github.spotbugs:spotbugs:4.5.0")
+                    spotbugs("com.github.spotbugs:spotbugs:4.5.1")
                 }
             }
         }
